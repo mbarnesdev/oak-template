@@ -1,13 +1,8 @@
 import { Fragment } from 'react';
 import { useTodoList } from '@/pages/Home/hooks';
-import { useEffect } from 'react';
 
 const TodoList = () => {
   const { localTodos, serverTodos, handleAddTodo } = useTodoList();
-
-  useEffect(() => {
-    console.log(localTodos);
-  }, [localTodos]);
 
   return (
     <Fragment>
