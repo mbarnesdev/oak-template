@@ -10,10 +10,6 @@ type ClientPostOptions<K> = {
   body: K;
 } & ClientGetOptions;
 
-const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
-});
-
 const client = (axiosInstance: AxiosInstance) => ({
   get: <T>({ url = '', config = {} }: ClientGetOptions) =>
     axiosInstance.get<T>(url, config),
@@ -21,4 +17,8 @@ const client = (axiosInstance: AxiosInstance) => ({
     axiosInstance.post<T, K>(url, body, config),
 });
 
-export default client(axiosInstance);
+export default client(
+  axios.create({
+    baseURL: import.meta.env.VITE_API_BASE_URL,
+  }),
+);
