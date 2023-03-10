@@ -1,8 +1,13 @@
 import { Fragment } from 'react';
 import { useTodoList } from '@/pages/Home/hooks';
+import { useEffect } from 'react';
 
 const TodoList = () => {
   const { localTodos, serverTodos, handleAddTodo } = useTodoList();
+
+  useEffect(() => {
+    console.log(localTodos);
+  }, [localTodos]);
 
   return (
     <Fragment>
@@ -13,6 +18,13 @@ const TodoList = () => {
       {serverTodos.isLoading ? <p>Loading...</p> : null}
       {serverTodos.isError ? <p>Error!</p> : null}
       {serverTodos.data ? <pre>{JSON.stringify(serverTodos.data)}</pre> : null}
+      {serverTodos.data ? (
+        <ul>
+          {serverTodos.data.map(({ id, title }) => (
+            <li key={id}>{title}</li>
+          ))}
+        </ul>
+      ) : null}
     </Fragment>
   );
 };
