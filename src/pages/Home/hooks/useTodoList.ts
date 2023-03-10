@@ -4,7 +4,7 @@ import { useTodos } from '@/pages/Home/hooks';
 export const useTodoList = () => {
   const localTodos = useTodoStore((state) => state.todos);
   const addTodo = useTodoStore((state) => state.addTodo);
-  const serverTodos = useTodos();
+  // const serverTodos = useTodos();
 
   const handleAddTodo = () =>
     addTodo({
@@ -15,7 +15,7 @@ export const useTodoList = () => {
 
   return {
     localTodos,
-    serverTodos,
+    // serverTodos,
     handleAddTodo,
   };
 };
