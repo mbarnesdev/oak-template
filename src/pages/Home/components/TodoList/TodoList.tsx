@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import { useTodoList } from "@/pages/Home/hooks";
+import { Fragment } from 'react';
+import { useTodoList } from '@/pages/Home/hooks';
 
 const TodoList = () => {
   const { localTodos, serverTodos, handleAddTodo } = useTodoList();

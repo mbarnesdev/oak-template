@@ -1,5 +1,5 @@
-import { create } from "zustand";
-import { immer } from "zustand/middleware/immer";
+import { create } from 'zustand';
+import { immer } from 'zustand/middleware/immer';
 
 type Todo = {
   id: number;
@@ -28,5 +28,5 @@ export const useTodoStore = create(
         const deleteIndex = state.todos.findIndex((todo) => todo.id === id);
         state.todos.splice(deleteIndex, 1);
       }),
-  }))
+  })),
 );

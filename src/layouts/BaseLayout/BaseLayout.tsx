@@ -1,5 +1,5 @@
-import { Outlet } from "react-router-dom";
-import { Sidebar } from "@/layouts/BaseLayout/components";
+import { Outlet } from 'react-router-dom';
+import { Sidebar } from '@/layouts/BaseLayout/components';
 
 const BaseLayout = () => (
   <div className="w-full h-screen flex flex-row">

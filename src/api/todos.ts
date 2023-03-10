@@ -1,7 +1,7 @@
-import { client } from "@/api";
+import { client } from '@/api';
 
 const TODOS_ENDPOINTS = {
-  fetchAllTodos: "/todos",
+  fetchAllTodos: '/todos',
 };
 
 type Todo = {

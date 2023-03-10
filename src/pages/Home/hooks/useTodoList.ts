@@ -1,6 +1,5 @@
-import { useTodoStore } from "@/stores";
-import { useTodos } from "@/pages/Home/hooks";
-import { faker } from "@faker-js/faker";
+import { useTodoStore } from '@/stores';
+import { useTodos } from '@/pages/Home/hooks';
 
 export const useTodoList = () => {
   const localTodos = useTodoStore((state) => state.todos);
@@ -10,7 +9,7 @@ export const useTodoList = () => {
   const handleAddTodo = () =>
     addTodo({
       id: Math.floor(Math.random() * 10000),
-      content: faker.lorem.sentence(10),
+      content: 'New todo content...',
       isCompleted: false,
     });
 

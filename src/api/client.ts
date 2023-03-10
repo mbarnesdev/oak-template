@@ -1,5 +1,5 @@
-import { default as axios } from "axios";
-import type { AxiosInstance, AxiosRequestConfig } from "axios";
+import { default as axios } from 'axios';
+import type { AxiosInstance, AxiosRequestConfig } from 'axios';
 
 type ClientGetOptions = {
   url: string;
@@ -15,9 +15,9 @@ const axiosInstance = axios.create({
 });
 
 const client = (axiosInstance: AxiosInstance) => ({
-  get: <T>({ url = "", config = {} }: ClientGetOptions) =>
+  get: <T>({ url = '', config = {} }: ClientGetOptions) =>
     axiosInstance.get<T>(url, config),
-  post: <T, K>({ url = "", body, config = {} }: ClientPostOptions<K>) =>
+  post: <T, K>({ url = '', body, config = {} }: ClientPostOptions<K>) =>
     axiosInstance.post<T, K>(url, body, config),
 });
 
