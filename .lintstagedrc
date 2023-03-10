@@ -1,6 +1,4 @@
 {
-  "*.ts": ["prettier --write", "eslint"],
-  "*.tsx": ["prettier --write", "eslint"],
-  "*.html": ["eslint", "prettier --write"],
-  "*.scss": "prettier --write"
+  "src/**/*.{js,jsx,ts,tsx}": "eslint --ext .jsx,.js,.cjs,.ts,.tsx --fix",
+  "src/**/*.{js,jsx,ts,tsx,css,scss,md}": "prettier --write --ignore-unknown"
 }
