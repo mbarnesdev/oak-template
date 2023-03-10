@@ -1,8 +1,6 @@
 import { client } from '@/api';
 
-const TODOS_ENDPOINTS = {
-  fetchAllTodos: '/todos',
-};
+const TODOS_ENDPOINTS = { fetchAllTodos: '/todos' };
 
 type Todo = {
   userId: number;

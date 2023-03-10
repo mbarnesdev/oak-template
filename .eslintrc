@@ -39,7 +39,7 @@
     "react/jsx-max-props-per-line": [1, { "when": "multiline" }],
     "react/prop-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/consistent-type-imports": "error",
     "react-hooks/exhaustive-deps": ["error"],
     "react-hooks/rules-of-hooks": ["error"],
     "react/no-array-index-key": ["error"]

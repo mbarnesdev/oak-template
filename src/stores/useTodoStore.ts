@@ -7,9 +7,7 @@ type Todo = {
   isCompleted: boolean;
 };
 
-type State = {
-  todos: Todo[];
-};
+type State = { todos: Todo[] };
 
 type Actions = {
   addTodo: (todo: Todo) => void;
